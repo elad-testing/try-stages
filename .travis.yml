@@ -1,0 +1,10 @@
+jobs:
+  include:
+    - stage: first
+      script: script.py
+    - stage: second
+      script: script.py
+    - stage: third
+      script: script.py
+    - stage: fourth
+      script: script.py
