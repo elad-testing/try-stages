@@ -1,6 +1,10 @@
 jobs:
   include:
     - stage: first
+      language: python
+      python: "3.6"
+      cache: pip
+      install: pip install --upgrade google-api-python-client google-auth-httplib2 google-auth-oauthlib
       script: script.py
     - stage: second
       script: script.py
