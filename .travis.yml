@@ -2,7 +2,7 @@ jobs:
   include:
     - stage: first
       script: python3 -u script.py $TRAVIS_PULL_REQUEST_SHA
-      after_scipt: bash deploy.sh
+      after_script: bash deploy.sh
 #     - stage: second
 #       language: python
 #       python: "3.6"
