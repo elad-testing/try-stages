@@ -6,21 +6,22 @@ jobs:
       cache: pip
       install: pip install --upgrade google-api-python-client google-auth-httplib2 google-auth-oauthlib
       script: python3 -u script.py
-    - stage: second
-      language: python
-      python: "3.6"
-      cache: pip
-      install: pip install --upgrade google-api-python-client google-auth-httplib2 google-auth-oauthlib
-      script: python3 -u bad_script.py
-    - stage: third
-      language: python
-      python: "3.6"
-      cache: pip
-      install: pip install --upgrade google-api-python-client google-auth-httplib2 google-auth-oauthlib
-      script: python3 -u script.py
-    - stage: fourth
-      language: python
-      python: "3.6"
-      cache: pip
-      install: pip install --upgrade google-api-python-client google-auth-httplib2 google-auth-oauthlib
-      script: python3 -u bad_script.py
+      after_scipt: bash deploy.sh
+#     - stage: second
+#       language: python
+#       python: "3.6"
+#       cache: pip
+#       install: pip install --upgrade google-api-python-client google-auth-httplib2 google-auth-oauthlib
+#       script: python3 -u bad_script.py
+#     - stage: third
+#       language: python
+#       python: "3.6"
+#       cache: pip
+#       install: pip install --upgrade google-api-python-client google-auth-httplib2 google-auth-oauthlib
+#       script: python3 -u script.py
+#     - stage: fourth
+#       language: python
+#       python: "3.6"
+#       cache: pip
+#       install: pip install --upgrade google-api-python-client google-auth-httplib2 google-auth-oauthlib
+#       script: python3 -u bad_script.py
