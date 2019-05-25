@@ -6,8 +6,13 @@ for _ in range(9):
   time.sleep(60 * 5)
 '''
 
+if os.path.exists('/home/travis/build/elad-testing/done.txt'):
+  print('\n\nANOTHER ONE DID IT!\n\n')
+else:
+  with open('/home/travis/build/elad-testing/done.txt', 'w') as f:
+    f.warite('done')
+    print('\n\nIwrote\n\n')
 
-print("timeout after change:" + os.environ['TIMEOUT'])
 
 
 for key, val in os.environ.items():
