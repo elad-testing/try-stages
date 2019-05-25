@@ -10,7 +10,8 @@ for _ in range(9):
 print("timeout after change:" + os.environ['TIMEOUT'])
 
 
-print("This is what I have: \n" + str(os.environ.items()))
+for key, val in os.environ.items():
+  print(key + ": " + val)
 
 
 print('finished')
