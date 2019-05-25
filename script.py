@@ -17,5 +17,4 @@ print("This is what I have: \n" + str(os.environ.items()))
 
 
 print('my sha is: %s' % os.environ['SHA'])
-print('my pr is: %s' % os.environ['$TRAVIS_PULL_REQUEST_SHA'])
 print('finished')
