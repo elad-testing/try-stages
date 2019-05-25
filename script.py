@@ -10,7 +10,7 @@ if os.path.exists('/home/travis/build/elad-testing/done.txt'):
   print('\n\nANOTHER ONE DID IT!\n\n')
 else:
   with open('/home/travis/build/elad-testing/done.txt', 'w') as f:
-    f.warite('done')
+    f.write('done')
     print('\n\nIwrote\n\n')
 
 
