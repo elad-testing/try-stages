@@ -13,7 +13,7 @@ os.putenv("TIMEOUT", "42")
 print("timeout after change:" + os.environ['TIMEOUT'])
 
 
-print("This is what I have: \n" + os.environ.items())
+print("This is what I have: \n" + str(os.environ.items()))
 
 
 print('my sha is: %s' % os.environ['SHA'])
