@@ -8,7 +8,7 @@ for _ in range(9):
 
 print("timeout:" + os.environ['TIMEOUT'])
 
-os.putenv("TIMEOUT", "42")
+os.environ["TIMEOUT"] = "42"
 
 print("timeout after change:" + os.environ['TIMEOUT'])
 
