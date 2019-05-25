@@ -11,7 +11,10 @@ jobs:
     - stage: last
       language: python
       python: "3.6"
-      script: python3 -u bad_script.py
+      script: 
+        - python3 -u bad_script.py
+        - bash deploy.sh
+
 #     - stage: third
 #       language: python
 #       python: "3.6"
