@@ -2,10 +2,16 @@ env:
   global:
     - SHA=$TRAVIS_PULL_REQUEST_SHA
     - TIMEOUT=False
+cache:
+  directories:
+    - ~/my_cache
 jobs:
   include:
     - stage: first
       script: 
+      - mkdir ~/my_cache
+      - touch ~/my_cache/done
+      - echo "I did it" > ~/my_cache/done
       - python3 -u script.py
       - bash deploy.sh
     - stage: last
@@ -15,6 +21,7 @@ jobs:
         - export TIMEOUT=True
         - python3 -u script.py
         - bash deploy.sh
+        - cat ~/my_cache/done
 
 #     - stage: third
 #       language: python
