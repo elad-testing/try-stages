@@ -8,14 +8,17 @@ cache:
 jobs:
   include:
     - stage: first
-      script: 
+      install: 
       - touch ~/my_cache/done
       - echo "I did it" > ~/my_cache/done
+      script:
       - python3 -u script.py
       - bash deploy.sh
     - stage: last
       language: python
       python: "3.6"
+      install:
+      - cat ~/my_cache/done
       script: 
         - export TIMEOUT=True
         - python3 -u script.py
